@@ -1,0 +1,71 @@
+.modal-body {
+    margin: 60px 80px;
+}
+
+.login-conteiner {
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-conteiner h1 {
+    font-weight: 500;
+    font-family: "Nunito", sans-serif;
+}
+
+.login-conteiner h1::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #EB6440;
+}
+
+form input {
+    height: 50px;
+    outline: none;
+    padding-left: 10px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #D9D9D9;
+}
+
+form button {
+    border: none;
+    color: #FFF;
+    cursor: pointer;
+    margin: 20px 0px;
+    width: min-content;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #EB6440;
+}
+
+.modal-body h3{
+    font-size: 24px;
+    font-family: "Nunito", sans-serif;
+}
+
+.modal-body h3::before {
+    content: "";
+    width: 15px;
+    padding: 2px;
+    height: 15px;
+    display: inline;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+}
+
+.modal-body a {
+    color: #FFF;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #EB6440;
+}

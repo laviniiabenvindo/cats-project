@@ -1,0 +1,34 @@
+<div
+  class="modal fade"
+  id="registrar"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="login-conteiner">
+          <h1>Cadastre-se</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <form action="/registrar" method="post">
+          <label for="nome">Usuário</label>
+          <input type="text" name="nome" required />
+          <label for="email">Email</label>
+          <input type="email" name="email" required />
+          <label for="password">Senha</label>
+          <input type="password" name="password" required />
+          <label for="confirmPassword">Repetir senha</label>
+          <input type="password" name="confirmPassword" required />
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

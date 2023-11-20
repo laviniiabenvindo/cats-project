@@ -59,7 +59,7 @@ module.exports = class AuthController {
     const passwordMatch = bcrypt.compareSync(password, user.password)
 
     // Varifica se a senha é valida
-    if(!passwordMatch) {
+    if (!passwordMatch) {
       request.flash("message", "Senha inválida!");
       response.render("home");
       return;
@@ -69,7 +69,7 @@ module.exports = class AuthController {
 
     request.flash("message", "Usuário autenticado com sucesso!");
 
-    request.session.save(()=>{
+    request.session.save(() => {
       response.redirect("/")
     })
   }

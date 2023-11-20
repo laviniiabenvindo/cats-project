@@ -11,6 +11,7 @@ const conn = require("./db/conn");
 const router = require("./routes/routers");
 const publicationRouters = require("./routes/publicationRouters");
 const likeRouters = require("./routes/likeRouters");
+const comementRouters = require("./routes/commentRouters");
 
 const User = require("./models/User");
 const Publication = require("./models/Publication");
@@ -34,7 +35,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     store: new FileStore({
-      logFn: function () {},
+      logFn: function () { },
       path: require("path").join(require("os").tmpdir(), "sessions"),
     }),
     cookie: {
@@ -59,8 +60,9 @@ app.use((request, response, next) => {
 
 
 app.use("/", router);
-app.use("/", publicationRouters); 
-app.use("/", likeRouters); 
+app.use("/", publicationRouters);
+app.use("/", likeRouters);
+app.use("/", comementRouters);
 
 app.get("/", (req, res) => {
   return res.render("home");

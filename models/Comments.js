@@ -12,7 +12,7 @@ const Comments = db.define("comments", {
   },
 });
 
-User.belongsToMany(Publication, { through: "Comments" });
-Publication.belongsToMany(User, { through: "Comments" });
+User.belongsToMany(Publication, { through: "comments" });
+Publication.belongsToMany(User, { through: "comments" });
 
 module.exports = Comments;

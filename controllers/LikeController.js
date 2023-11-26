@@ -5,6 +5,12 @@ module.exports = class LikesController {
     const publicationId = request.body.publicationId;
     const userId = request.session.userId;
 
+    if (userId == null) {
+      request.flash("message", "O login deve ser feito!");
+      response.render("home");
+      return;
+    }
+
     const like = {
       userId: userId,
       publicationId: publicationId,

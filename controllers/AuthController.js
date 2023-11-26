@@ -9,7 +9,7 @@ module.exports = class AuthController {
     // Verificar as senhas
     if (password != confirmPassword) {
       request.flash("message", "As senhas não conferem, tente novamente");
-      response.redirect("/");
+      response.render("home");
       return;
     }
 

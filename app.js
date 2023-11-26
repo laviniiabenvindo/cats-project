@@ -60,9 +60,9 @@ app.use((request, response, next) => {
 
 
 app.use("/", router);
-app.use("/", publicationRouters);
 app.use("/", likeRouters);
 app.use("/", comementRouters);
+app.use("/", publicationRouters);
 
 app.get("/", (req, res) => {
   return res.render("home");

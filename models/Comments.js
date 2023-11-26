@@ -5,6 +5,11 @@ const User = require("./User");
 const Publication = require("./Publication");
 
 const Comments = db.define("comments", {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
   comments: {
     type: DataTypes.STRING,
     require: true,
